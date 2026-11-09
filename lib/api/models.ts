@@ -26,7 +26,7 @@ export const SUPPORTED_MODELS = {
   ],
   anthropic: [
     // Claude 4 models that support Messages API with MCP
-    'claude-sonnet-4-5-20250929',
+    'claude-sonnet-5-5',
     'claude-haiku-4-5', // Latest Haiku 4.5
   ],
   groq: [
@@ -40,7 +40,7 @@ export const SUPPORTED_MODELS = {
  */
 export const DEFAULT_MODELS = {
   openai: 'gpt-4o',
-  anthropic: 'claude-sonnet-4-5-20250929', // Claude 4.5 Sonnet
+  anthropic: 'claude-sonnet-5-5', // Claude Sonnet 5.5
   groq: 'gpt-oss-120b', // Using Responses API model for better MCP support
 } as const;
 

@@ -66,7 +66,7 @@ export default function NodePanel({
         models.push({
           provider: 'Anthropic',
           models: [
-            { id: 'anthropic/claude-sonnet-4-5-20250929', name: 'Claude Sonnet 4.5' },
+            { id: 'anthropic/claude-sonnet-5-5', name: 'Claude Sonnet 5.5' },
             { id: 'anthropic/claude-haiku-4-5-20251001', name: 'Claude Haiku 4.5' },
           ]
         });
@@ -171,7 +171,7 @@ export default function NodePanel({
   const [name, setName] = useState(nodeData?.label || "My agent");
   const [instructions, setInstructions] = useState((nodeData as any)?.instructions || "");
   const [includeChatHistory, setIncludeChatHistory] = useState(true);
-  const [model, setModel] = useState("anthropic/claude-sonnet-4-5-20250929");
+  const [model, setModel] = useState("anthropic/claude-sonnet-5-5");
   const [outputFormat, setOutputFormat] = useState("Text");
   const [customModel, setCustomModel] = useState("");
   const [showAdvanced, setShowAdvanced] = useState(false);
@@ -205,7 +205,7 @@ export default function NodePanel({
       setName(data.name || data.nodeName || nodeData.label);
       setInstructions(incomingInstructions);
       setIncludeChatHistory(data.includeChatHistory ?? true);
-      setModel(data.model || "anthropic/claude-sonnet-4-5-20250929");
+      setModel(data.model || "anthropic/claude-sonnet-5-5");
       setOutputFormat(data.outputFormat || "Text");
       setShowSearchSources(data.showSearchSources ?? false);
       lastSyncedInstructionsRef.current = incomingInstructions;

@@ -107,7 +107,7 @@ export default function ExtractNodePanel({
               className="w-full px-12 py-10 bg-background-base border border-border-faint rounded-8 text-body-medium text-accent-black focus:outline-none focus:border-heat-100 transition-colors"
             >
               <optgroup label="Anthropic">
-                <option value="anthropic/claude-sonnet-4-5-20250929">Claude Sonnet 4.5</option>
+                <option value="anthropic/claude-sonnet-5-5">Claude Sonnet 5.5</option>
                 <option value="anthropic/claude-haiku-4-5-20251001">Claude Haiku 4.5</option>
               </optgroup>
               <optgroup label="OpenAI">

@@ -477,8 +477,7 @@ export default function ToolsNodePanel({ node, onClose, onDelete, onUpdate }: To
                           <option value="groq/openai/gpt-oss-120b">GPT OSS 120B</option>
                         </optgroup>
                         <optgroup label="Anthropic">
-                          <option value="anthropic/claude-sonnet-4-5-20250929">Claude Sonnet 4.5</option>
-                          <option value="anthropic/claude-sonnet-4-20250514">Claude Sonnet 4</option>
+                          <option value="anthropic/claude-sonnet-5-5">Claude Sonnet 5.5</option>
                         </optgroup>
                       </select>
                       <p className="text-body-small text-black-alpha-48 mt-8">

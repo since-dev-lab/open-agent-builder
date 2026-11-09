@@ -1324,7 +1324,7 @@ export function workflowToLangGraphCode(workflow: Workflow): string {
         return `// ${data.nodeName || node.id} - AI Agent
 const ${node.id} = async (state: typeof StateAnnotation.State) => {
   const response = await anthropic.messages.create({
-    model: "${data.model || 'claude-3-5-sonnet-20241022'}",
+    model: "${data.model || 'claude-sonnet-5-5'}",
     max_tokens: 4096,
     messages: [{
       role: 'user',
@@ -1334,7 +1334,7 @@ const ${node.id} = async (state: typeof StateAnnotation.State) => {
 
   return {
     ...state.variables,
-    lastOutput: response.content[0].type === 'text' ? response.content[0].text : ''
+    lastOutput: response.content.filter((block) => block.type === 'text').map((block) => (block.type === 'text' ? block.text : '')).join('\\n')
   };
 };`;
       }

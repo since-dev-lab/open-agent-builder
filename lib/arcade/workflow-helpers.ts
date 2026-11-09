@@ -42,7 +42,7 @@ export function createArcadeAgentNode(config: {
       nodeType: 'agent',
       nodeName: arcadeConfig.name,
       instructions,
-      model: config.model || 'anthropic/claude-sonnet-4-20250514',
+      model: config.model || 'anthropic/claude-sonnet-5-5',
       outputFormat: 'Text',
       tools: [arcadeConfig.mcpServer.id],
       mcpTools: [

@@ -247,7 +247,10 @@ async function analyzeWithLLM(
       messages: [{ role: 'user', content: prompt }],
     });
 
-    const text = response.content[0].type === 'text' ? response.content[0].text : '';
+    const text = response.content
+      .filter((block) => block.type === 'text')
+      .map((block) => (block.type === 'text' ? block.text : ''))
+      .join('\n');
 
     // Extract JSON from response
     const jsonMatch = text.match(/\{[\s\S]*\}/);
