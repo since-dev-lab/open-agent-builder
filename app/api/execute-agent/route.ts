@@ -36,7 +36,7 @@ export async function POST(request: NextRequest) {
       data: {
         label: 'Agent',
         instructions: instructions || 'Process the input',
-        model: model || 'anthropic/claude-sonnet-4-20250514',
+        model: model || 'anthropic/claude-sonnet-5-5',
         outputFormat: jsonSchema ? 'JSON' : 'Text',
         jsonOutputSchema: jsonSchema,
         mcpTools: mcpTools,
